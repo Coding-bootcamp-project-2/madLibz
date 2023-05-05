@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS madlibz_db;
+
+CREATE DATABASE madlibz_db;
