@@ -3,33 +3,31 @@ const { Madlibz } = require('../../models');
 const { UserLibz } = require('../../models/UserLibz');
 
 
-router.get("/", (req, res) => {
-  res.send("hello world");
-})
-// router.get('/', async (req, res) => {
-//   try {
-//     const dbMadLibzData = await Madlibz.findAll({
-//       include: [
-//         {
-//           model: UserLibz,
-//           attributes: ['title', 'content'],
-//         },
-//       ],
-//     });
 
-//     const madlibz = dbMadLibzData.map((Madlibz) =>
-//       Madlibz.get({ plain: true })
-//     );
+router.get('/', async (req, res) => {
+  try {
+    const dbMadLibzData = await Madlibz.findAll({
+      include: [
+        {
+          model: UserLibz,
+          attributes: ['title', 'content'],
+        },
+      ],
+    });
+
+    const madlibz = dbMadLibzData.map((Madlibz) =>
+      Madlibz.get({ plain: true })
+    );
    
-//     res.render('homepage', {
-//       madlibz,
-//       loggedIn: req.session.loggedIn,
-//     });
-//   } catch (err) {
-//     console.log(err);
-//     res.status(500).json(err);
-//   }
-// });
+    res.render('homepage', {
+      madlibz,
+      loggedIn: req.session.loggedIn,
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
 
 
 router.get('/madlibz/:id', async (req, res) => {
