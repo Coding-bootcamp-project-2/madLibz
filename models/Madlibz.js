@@ -17,7 +17,7 @@ Madlibz.init(
         allowNull: false,
     },
     content: {
-        type: DataTypes.STRING,
+        type: DataTypes.BLOB,
         allowNull: false,
     },
     },
