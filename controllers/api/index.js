@@ -1,5 +1,8 @@
 const router = require('express').Router();
 
+const userRoutes = require('./user-routes');
+
+router.use('/users', userRoutes);
 //THESE ARE EXAMPLES
 
 // const categoryRoutes = require('./category-routes');
