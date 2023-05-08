@@ -1,18 +1,15 @@
 const router = require('express').Router();
+const madlibzRoutes = require('./Madlibz-routes');
 
-const userRoutes = require('./user-routes');
 
-router.use('/users', userRoutes);
-//THESE ARE EXAMPLES
 
-// const categoryRoutes = require('./category-routes');
-// const productRoutes = require('./product-routes');
-// const tagRoutes = require('./tag-routes');
 
-//THESE ARE EXAMPLES
+router.use('/Madlibz', madlibzRoutes);
 
-// router.use('/categories', categoryRoutes);
-// router.use('/products', productRoutes);
-// router.use('/tags', tagRoutes);
+
+
+
+
+
 
 module.exports = router;
