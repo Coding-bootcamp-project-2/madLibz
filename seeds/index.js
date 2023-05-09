@@ -1,6 +1,7 @@
 const sequelize = require('../config/connection.js');
 const seedMadlibz = require("./seedMadlibz");
-const seedUserCreds = require("./seedUserCreds")
+const seedUserCreds = require("./seedUserCreds");
+const seedUserLibz = require("./seedUserlibz");
 
 const seedAll = async () => {
     await sequelize.sync({ force: true });
@@ -9,6 +10,8 @@ const seedAll = async () => {
     console.log('\n----- Madlibz SEEDED -----\n');
     await seedUserCreds();
     console.log('\n----- UserCreds SEEDED -----\n');
+    await seedUserLibz();
+    console.log('\n----- UserLibz SEEDED -----\n');
     
     process.exit(0);
   };
