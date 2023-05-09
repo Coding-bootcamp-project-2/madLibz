@@ -5,6 +5,7 @@ const parentDir = path.dirname(__dirname);
 const correctPath = path.join(parentDir, 'views/layouts/main.handlebars');
 const correctPathLogin = path.join(parentDir, 'views/login.handlebars');
 const correctPathSignUp = path.join(parentDir, 'views/signup.handlebars');
+const correctPathHomepage = path.join(parentDir, 'views/homepage.handlebars');
 
 router.use('/api', apiRoutes);
 
@@ -21,6 +22,11 @@ router.get("/login", (req, res) => {
 //pulls up localhost:3001/signup
 router.get("/signup", (req, res) => {
   res.sendFile(correctPathSignUp)
+});
+
+//pulls up localhost:3001/homepage
+router.get("/homepage", (req, res) => {
+  res.sendFile(correctPathHomepage)
 });
 
 router.use((req, res) => {
