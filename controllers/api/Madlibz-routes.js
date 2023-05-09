@@ -23,6 +23,8 @@ router.get('/', async (req, res) => {
       madlibz,
       loggedIn: req.session.loggedIn,
     });
+
+
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
