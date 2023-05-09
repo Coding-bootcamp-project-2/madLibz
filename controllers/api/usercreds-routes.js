@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { UserCreds } = require('../../models');
+const sequelize = require("../../config/connection")
 
 
 // CREATE new user
@@ -22,6 +23,18 @@ router.post('/', async (req, res) => {
   }
 });
 
+router.get("/", async (req, res) => {
+  try {
+    sequelize.query(`SELECT * FROM usercreds`)
+      .then(results => {
+        res.status(200).json(results)
+      })
+  } catch (err) {
+    res.status(500).json(err)
+  }
+});
+
+/*
 // Login
 router.post('/login', async (req, res) => {
   try {
@@ -69,6 +82,6 @@ router.post('/logout', (req, res) => {
   } else {
     res.status(404).end();
   }
-});
+});*/
 
 module.exports = router;
