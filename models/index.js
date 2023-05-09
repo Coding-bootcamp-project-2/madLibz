@@ -15,4 +15,4 @@ UserCreds.belongsTo(UserLibz, {
   foreignKey: 'madlibz_id',
 });
 
-module.exports = { UserCreds, Madlibz};
+module.exports = { UserCreds, Madlibz, UserLibz};
