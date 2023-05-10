@@ -11,7 +11,8 @@ router.use('/api', apiRoutes);
 
 //pulls up localhost:3001/
 router.get("/", (req, res) => {
-    res.sendFile(correctPath)
+  res.render("homepage")
+    // res.sendFile(correctPath)
   });
 
 //pulls up localhost:3001/login

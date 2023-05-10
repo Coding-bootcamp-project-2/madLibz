@@ -1,11 +1,13 @@
 const router = require('express').Router();
-const { Madlibz } = require('../../models');
+//const { Madlibz } = require('../../models');
 const sequelize = require("../../config/connection");
 const getRandomInt = (min, max) => {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min) + min)
 }
+
+
 //const { UserLibz } = require('../../models/UserLibz');
 
 router.get("/", async (req, res) => {
