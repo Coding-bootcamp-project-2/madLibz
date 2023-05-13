@@ -72,22 +72,22 @@ aside {
   text-align: center;
 }
 
-.madlibz {
+.gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 20px;
 }
 
-.madlibz-item {
+.gallery-item {
   overflow: hidden;
 }
 
-.madlibz-item img {
+.gallery-item img {
   max-width: 100%;
   transition: all 0.5s ease;
 }
 
-.madlibz-item:hover img {
+.gallery-item:hover img {
   transform: scale(1.1);
 }
 
