@@ -11,23 +11,22 @@ router.use('/api', apiRoutes);
 
 //pulls up localhost:3001/
 router.get("/", (req, res) => {
-  res.render("homepage")
-    // res.sendFile(correctPath)
+    res.render(correctPath)
   });
 
 //pulls up localhost:3001/login
 router.get("/login", (req, res) => {
-  res.sendFile(correctPathLogin)
+  res.render(correctPathLogin)
 });
 
 //pulls up localhost:3001/signup
 router.get("/signup", (req, res) => {
-  res.sendFile(correctPathSignUp)
+  res.render(correctPathSignUp)
 });
 
 //pulls up localhost:3001/homepage
 router.get("/homepage", (req, res) => {
-  res.sendFile(correctPathHomepage)
+  res.render(correctPathHomepage)
 });
 
 router.use((req, res) => {
