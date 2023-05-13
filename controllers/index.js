@@ -1,6 +1,8 @@
 const router = require('express').Router();
 const apiRoutes = require('./api');
 const path = require('path');
+
+
 const parentDir = path.dirname(__dirname);
 const correctPath = path.join(parentDir, 'views/layouts/main.handlebars');
 const correctPathLogin = path.join(parentDir, 'views/login.handlebars');
