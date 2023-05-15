@@ -4,7 +4,7 @@ const UserLibz = require('./UserLibz');
 
 
 UserLibz.hasMany(UserCreds, {
-  foreignKey: 'user_libz_id',
+  foreignKey: 'userlibz_id',
 });
 
 Madlibz.hasOne(UserCreds, {
