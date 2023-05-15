@@ -1,37 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MadLibz</title>
-  <link rel="stylesheet" type="text/css" href="/css/jass.css">
-  <link rel="stylesheet" type="text/css" href="/css/style.css">
-</head>
-
-<body>
-  <header>
+<div>
+    <header>
     <h1>MadLibz!</h1>
   </header>
-  <nav>
-    <a href="/">Home</a>
-    {{#if loggedIn}}
-    <button id="logout" class="btn-no-style">Logout</button>
-    {{else}}
-    <a href="/login">Login</a>
-    {{/if}}
-  </nav>
-  <main>
-    <aside>
+
+  <div>
       <h2>Don't forget to Google what a nound is!</h2>
-    </aside>
-    <div class="madlibz">
-      {{{body}}}
     </div>
-  </main>
+    <div class="madlibz">
+    </div>
   {{#if loggedIn}}
   <script src="/js/logout.js"></script>
   {{/if}}
-</body>
-
-</html>
+</div>
