@@ -3,16 +3,16 @@ const UserCreds = require('./UserCreds');
 const UserLibz = require('./UserLibz');
 
 
-UserLibz.hasMany(UserCreds, {
-  foreignKey: 'userlibz_id',
-});
+// UserLibz.hasMany(UserCreds, {
+//   foreignKey: 'userlibz_id',
+// });
 
-Madlibz.hasOne(UserCreds, {
-  foreignKey: 'madlibz_id',
-});
+// Madlibz.hasOne(UserCreds, {
+//   foreignKey: 'madlibz_id',
+// });
 
-UserCreds.belongsTo(UserLibz, {
-  foreignKey: 'madlibz_id',
-});
+// UserCreds.belongsTo(UserLibz, {
+//   foreignKey: 'madlibz_id',
+// });
 
 module.exports = { UserCreds, Madlibz, UserLibz};
