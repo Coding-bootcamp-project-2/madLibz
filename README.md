@@ -22,6 +22,8 @@ Adrian and Michelle front end log in and handlebars.
 ### Links
 Repository: https://github.com/Coding-bootcamp-project-2/madLibz
 Heorku Deployed: https://madlibz-1.herokuapp.com/
-Google Slides:https://docs.google.com/presentation/d/1L_NNTiCkPLCl65rCVdmSiDT-bVkX78fQ4bhstclyBt8/edit#slide=id.p
+Google Slides:https://docs.google.com/presentation/d/1txwIy5F6c4gm7CAt81WLBnZ0_EQDiArzH3_DJ6s6a9U/edit#slide=id.g1fd1f4b0eb1_2_15
+
+
 
 
