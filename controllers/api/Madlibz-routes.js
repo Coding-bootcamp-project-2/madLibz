@@ -1,6 +1,7 @@
 const router = require('express').Router();
 //const { Madlibz } = require('../../models');
 const sequelize = require("../../config/connection");
+
 const getRandomInt = (min, max) => {
   min = Math.ceil(min);
   max = Math.floor(max);
@@ -10,7 +11,7 @@ const getRandomInt = (min, max) => {
 
 //const { UserLibz } = require('../../models/UserLibz');
 
-router.get("/", async (req, res) => {
+router.get("/", (req, res) => {
   try {
     const rando = getRandomInt(1, 3);
     sequelize.query(`SELECT content FROM madlibz WHERE id='${rando}'`)
