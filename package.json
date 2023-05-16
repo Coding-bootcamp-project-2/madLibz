@@ -2,6 +2,9 @@
   "name": "madlibz",
   "version": "1.0.0",
   "description": "",
+  "engines": {
+    "npm":"9.6.6"
+  },
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
