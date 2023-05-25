@@ -32,9 +32,9 @@ try {
 });
 
 //pulls up localhost:3001/homepage
-router.get("/homepage", (req, res) => {
-res.render('homepage', { loggedIn: req.session.loggedIn, });
-});
+// router.get("/homepage", (req, res) => {
+// res.render('homepage', { loggedIn: req.session.loggedIn, });
+// });
 
 router.use((req, res) => {
 res.send("<h1>Wrong Route!</h1>")
