@@ -3,4 +3,18 @@
     <h3>{{madlibzData.title}}</h3>
     <p>{{madlibzData.content}}</p>
  </div>
+ <div class="madlibz form">
+  <form method="POST" action="/madlib">
+    <label for="verb">Verb:</label>
+    <input type="text" id="verb" name="verb" required>
+    <br>
+    <label for="adjective">Adjective:</label>
+    <input type="text" id="adjective" name="adjective" required>
+    <br>
+    <label for="noun">Noun:</label>
+    <input type="text" id="noun" name="noun" required>
+    <br>
+    <button type="submit">Generate Madlibz</button>
+  </form>
+ </div>
 </section>
