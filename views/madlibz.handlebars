@@ -1,20 +1,53 @@
 <section class="container">
- <div class="madlibz">
+  <div class="madlibz">
     <h3>{{madlibzData.title}}</h3>
     <p>{{madlibzData.content}}</p>
- </div>
- <div class="madlibz form">
-  <form method="POST" action="/madlib">
-    <label for="verb">Verb:</label>
-    <input type="text" id="verb" name="verb" required>
-    <br>
-    <label for="adjective">Adjective:</label>
-    <input type="text" id="adjective" name="adjective" required>
-    <br>
-    <label for="noun">Noun:</label>
-    <input type="text" id="noun" name="noun" required>
-    <br>
-    <button type="submit">Generate Madlibz</button>
-  </form>
- </div>
+  </div>
+  <div class="madlib-container">
+    <form id="madlibForm" method="POST" action="/madlibz">
+      <label for="verb">Verb:</label>
+      <input type="text" id="verb" name="verb" required>
+      <br>
+      <label for="adjective">Adjective:</label>
+      <input type="text" id="adjective" name="adjective" required>
+      <br>
+      <label for="noun">Noun:</label>
+      <input type="text" id="noun" name="noun" required>
+      <br>
+      <button type="submit">Generate Madlibz</button>
+    </form>
+  </div>
 </section>
+
+<script>
+  // Add event listener to the form submission
+  const madlibForm = document.getElementById('madlibForm');
+  madlibForm.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    
+    const nounInput = document.getElementById('noun');
+    const verbInput = document.getElementById('verb');
+    const adjInput = document.getElementById('adjective');
+    
+    const noun = nounInput.value;
+    const verb = verbInput.value;
+    const adj = adjInput.value;
+    
+    try {
+      const response = await fetch("/madlibz", {
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ noun, verb, adj })
+      });
+      
+      const data = await response.json();
+      console.log("POST request made", data);
+      
+      // Perform any additional actions with the response data
+    } catch (error) {
+      console.log(error);
+    }
+  });
+</script>
