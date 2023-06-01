@@ -1,5 +1,5 @@
 const { UserCreds } = require('../models/');
-// const Sequelize = require("sequelize");
+
 
 const userCredsData = [
   {

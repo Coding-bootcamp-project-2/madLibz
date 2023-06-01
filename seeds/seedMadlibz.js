@@ -1,19 +1,19 @@
 const { Madlibz } = require('../models/');
-// const Sequelize = require("sequelize");
+
 
 
 const madlibzData = [
   {
     title: 'Clockwork Orange Lib 01',
-    content: "'Not having that we're not, brotherth. Don't ~ the ^ *!'",
+    content: "'Not having that we're not, brotherth. Don't %noun% the %verb% %adjective%!'",
   },
   {
     title: "Clockwork Orange Lib 02",
-    content: "I do not wish to describe, brothers, what other horrible * I was like forced to ~ that ^ afternoon."
+    content: "I do not wish to describe, brothers, what other horrible %noun% I was like forced to %verb% that %adjective% afternoon."
   },
   {
     title: "Clockwork Orange Lib 03",
-    content: "... and I could ~ all the ^ * sitting down slooshying."
+    content: "... and I could %noun% all the %verb% %adjective% sitting down slooshying."
   }
 ];
 
