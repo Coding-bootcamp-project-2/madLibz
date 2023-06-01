@@ -1,10 +1,6 @@
 <section class="container">
-  <div class="madlibz">
-    <h3>{{madlibzData.title}}</h3>
-    <p>{{madlibzData.content}}</p>
-  </div>
   <div class="madlib-container">
-    <form id="madlibForm" method="POST" action="/madlibz">
+    <form id="madlibForm">
       <label for="verb">Verb:</label>
       <input type="text" id="verb" name="verb" required>
       <br>
@@ -19,35 +15,4 @@
   </div>
 </section>
 
-<script>
-  // Add event listener to the form submission
-  const madlibForm = document.getElementById('madlibForm');
-  madlibForm.addEventListener('submit', async (event) => {
-    event.preventDefault();
-    
-    const nounInput = document.getElementById('noun');
-    const verbInput = document.getElementById('verb');
-    const adjInput = document.getElementById('adjective');
-    
-    const noun = nounInput.value;
-    const verb = verbInput.value;
-    const adj = adjInput.value;
-    
-    try {
-      const response = await fetch("/madlibz", {
-        method: "POST",
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ noun, verb, adj })
-      });
-      
-      const data = await response.json();
-      console.log("POST request made", data);
-      
-      // Perform any additional actions with the response data
-    } catch (error) {
-      console.log(error);
-    }
-  });
-</script>
+<script src="./js/libz.js"></script>

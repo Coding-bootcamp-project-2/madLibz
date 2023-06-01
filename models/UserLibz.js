@@ -12,21 +12,20 @@ UserLibz.init(
       autoIncrement: true
     
     },
-    title: {
-        type: DataTypes.STRING,
-        allowNull: false,
-    },
-    content: {
-        type: DataTypes.STRING,
-        allowNull: false,
-    },
-    lib_creater: {
-        type: DataTypes.STRING,
-        allowNull: false,
-    },
-    user_cred_id: {
+    madlibz_id:{
         type: DataTypes.INTEGER,
-        allowNull: false,
+        references: {
+            model: 'madlibz',
+            key: 'id'
+        }
+
+    },
+    usercreds_id: {
+        type: DataTypes.INTEGER,
+        references: {
+            model: 'usercreds',
+            key: 'id'
+        }
     },
     },
     {
